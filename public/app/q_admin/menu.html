@@ -1,0 +1,53 @@
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body style="background-color: white;">
+  <form name="myForm" id="menu_form" class="form-horizontal align-c" role="form">
+    <div layout="column" style="height: auto !important;" ng-cloak>
+      <section layout="row" flex>
+        <md-sidenav class="bgcolor100 width250" md-component-id="left" md-disable-backdrop md-whiteframe="4">
+          <md-toolbar class="md-theme-indigo ">
+            <h1 class="md-toolbar-tools bgcolor700">
+              <md-button class="md-icon-button width-50 bgcolor500" aria-label="Favorite" ng-click="toggleLeft()">
+                <i class="fa fa-fast-forward" aria-hidden="true"></i>
+              </md-button>
+              <p>เลือกรายการ
+              </p>
+            </h1>
+          </md-toolbar>
+          <form name="myForm" id="rightform" class="form-horizontal " role="form">
+
+            <div align="center">
+                <!-- <md-button class="md-raised " ng-click="role()" title="" style="width:220px; ">กำหนดสิทธิ</md-button> -->
+                <md-button class="md-raised " ng-click="a2()" title="" style="width:220px; ">ตั้งค่าแผนก</md-button>
+              <!-- <md-button class="md-raised " ng-click="a1()" title="" style="width:220px; ">message call pt</md-button>
+              <md-button class="md-raised " ng-click="a6()" title="" style="width:220px; ">patient require note</md-button> -->
+              <md-button class="md-raised " ng-click="a3()" title="" style="width:220px; ">ตั้งค่าหัอง</md-button>
+              <!-- <md-button class="md-raised " ng-click="a7()" title="" style="width:220px; ">zigbee</md-button> -->
+              <!-- <md-button class="md-raised " ng-click="a5()" title="" style="width:220px; ">ข้อความแสดงบนจอภาพ</md-button> -->
+            </div>
+            <Br>
+            <div class="container " ng-if="menu ">
+              <md-progress-linear md-mode="query "></md-progress-linear>
+            </div>
+          </form>
+        </md-sidenav>
+        <md-content flex layout-padding>
+          <div layout="row " layout-align="top left ">
+
+            <md-button ng-click="showmenu()" aria-label="show menu " class="md-raised width-50 bgcolor500">
+              <i class="fa fa-fast-backward" aria-hidden="true"></i>
+            </md-button>
+
+          </div>
+        </md-content>
+      </section>
+    </div>
+  </form>
+
+</body>
+
+</html>

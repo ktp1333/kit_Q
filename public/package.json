@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "async": "^3.1.0",
+    "c3": "^0.7.20",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.23",
+    "moment": "^2.29.1",
+    "tabulator-tables": "^4.9.3",
+    "textangular": "^1.5.16"
+  }
+}

@@ -1,0 +1,84 @@
+<form ng-show="right">
+
+  <md-content class="md-padding" layout-xs="column" layout="row">
+    <!-- left -->
+    <div flex-xs flex-gt-xs="30" layout="column">
+      <!-- left 1  -->
+      <md-card style="height:90vH">
+        <div class="marginleft15 ">
+          {{depart}}
+        </div>
+        <div class=" table-responsive panel-body bgcolorwhite" runat="server" style="overflow-y:scroll; height:100vH">
+          <!-- <table ng-repeat="detail in department  | orderBy: 'name'" class="table  table-hover font-1em ">
+            <tr>
+              <td class="align-l "> -->
+          <div ng-repeat="detail in department  | orderBy: 'name'">
+            <button class="btn btn-info widthcard" title="">
+              {{detail.department}}
+            </button>
+          </div>
+          <!-- </td>
+            </tr>
+          </table> -->
+
+        </div>
+      </md-card>
+
+    </div>
+
+
+    <!-- right -->
+    <div flex-xs flex-gt-xs="70" layout="column">
+
+      <!-- R1 -->
+      <md-card style="height:90vH" ng-if="vm.R1">
+        <md-card style="height:15vH" class="  ">
+
+          <div class="textheader">ใส่ชื่อจุดตรวจ</div>
+
+        </md-card>
+        <md-card style="height:70vH">
+          <div class="align-c  width100p  bgcolor100 divradius " style=" overflow-y:scroll;">
+
+            <div flex layout="row">
+              <input type="text" class="marginleft15 widthinput" placeholder="" value="" ng-model="vm.dep">
+
+              <div class="marginleft15 ">
+                <button class="btn btn-danger" ng-click="savedep(vm.dep)" title="">
+                  บันทึก
+                  <!-- <span class="glyphicon glyphicon-ok"></span> -->
+                </button>
+              </div>
+            </div>
+            <div>{{txt_savedep}}</div>
+          </div>
+        </md-card>
+
+      </md-card>
+
+
+
+      <!-- loadingpage -->
+      <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" ng-show="loading" md-theme-watch
+        ng-if="loadingpage">
+        <md-card-content>
+          <div style="height:80%;" flex layout="column">
+            <div class="align-c">
+              <img class="square" src="../../app/image/loading.gif" style="width:100px">
+              <div class="alert alert-warning">
+                <strong> โปรดรอสักครู่</strong>
+              </div>
+            </div>
+            <div>{{note_text}}</div>
+          </div>
+        </md-card-content>
+
+      </md-card>
+
+    </div>
+  </md-content>
+
+
+
+
+</form>

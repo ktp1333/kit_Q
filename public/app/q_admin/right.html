@@ -1,0 +1,52 @@
+<form id="right" ng-if="right">
+  <style>
+    html {
+      height: 100%;
+    }
+
+    body {
+      height: 100%;
+    }
+
+    .content {
+      display: flex;
+      height: 100%;
+      flex-flow: column;
+    }
+
+    #section0,
+    #sectionscan,
+    #sectioncredit,
+    .contentheader {
+      flex: 0 1 auto;
+      /* 0 ตาม heigh ของ content */
+      flex-direction: column;
+    }
+
+    #sectionorder,
+    .contentdetail {
+      flex: 1 1 auto;
+      overflow: auto;
+      /*1 fill พื้นที่ที่เหลือ */
+    }
+
+    .contentfooter {
+      flex: 0 1 auto;
+      /* 0 ตาม heigh ของ content */
+    }
+
+    .img1 {
+      width: 100% !important;
+    }
+
+    .dpict {
+      width: 30vW !important;
+      /* height: 20vH !important; */
+    }
+  </style>
+
+  <div class="contentdetail">
+    <iframe src="{{getIframeUrl}}" style="height:85%;width:100%;border:none"></iframe>
+  </div>
+
+</form>

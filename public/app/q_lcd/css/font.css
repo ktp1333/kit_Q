@@ -1,0 +1,77 @@
+  
+
+    .fontm {
+      font-family: 'Pridi', serif !important;
+      font-size: 1.8vW !important;
+      font-weight: bold !important;
+
+    }
+
+    .fonth {
+      font-family: 'Pridi', serif !important;
+      font-size: 5vW !important;
+      color:#26A69A;
+
+    }
+    .font-2em {
+      font-family: 'Pridi', serif !important;
+      font-size: 2em !important;
+      font-style: bold !important;
+    }
+    .fontlcdtitle {
+      font-family: 'Pridi', serif !important;
+      font-size: 4em !important;
+      font-style: bold !important;
+    }
+    .fontlcd1 {
+      font-family: 'Pridi', serif !important;
+      font-size: 6em !important;
+      font-style: bold !important;
+      padding-left: 1em;
+      color:rgba(240, 239, 238, 0.796);
+    }
+    .fontlcd2 {
+      font-family: 'Pridi', serif !important;
+      font-size: 6em !important;
+      font-style: bold !important;
+      color:rgba(231, 231, 231, 0.678);
+    }
+    .fontpharma1 {
+      font-family: 'Pridi', serif !important;
+      font-size: 3em !important;
+      font-style: bold !important;
+      padding-left: 1em;
+      color:rgba(240, 239, 238, 0.796);
+    }
+    .fontpharma2 {
+      font-family: 'Pridi', serif !important;
+      font-size: 3em !important;
+      font-style: bold !important;
+      color:rgba(231, 231, 231, 0.678);
+    }
+    .fontcash1 {
+      font-family: 'Pridi', serif !important;
+      font-size: 3em !important;
+      font-style: bold !important;
+      padding-left: 1em;
+      color:rgba(240, 239, 238, 0.796);
+    }
+    .fontcash2 {
+      font-family: 'Pridi', serif !important;
+      font-size: 3em !important;
+      font-style: bold !important;
+      color:rgba(231, 231, 231, 0.678);
+    }
+    .fontvip1 {
+      font-family: 'Pridi', serif !important;
+      font-size: 5em !important;
+      font-style: bold !important;
+      padding-left: 1em;
+      color:rgba(240, 239, 238, 0.796);
+    }
+    .fontvip2 {
+      font-family: 'Pridi', serif !important;
+      font-size: 5em !important;
+      font-style: bold !important;
+      color:rgba(231, 231, 231, 0.678);
+    }

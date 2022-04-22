@@ -1,0 +1,155 @@
+<html ng-app="myApp" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <title> Q</title>
+  <!-- <meta http-equiv="refresh" content="60" /> -->
+  <meta name="apple-mobile-web-app-title" content="Q" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content="">
+  <meta name="viewport"
+    content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 3, user-scalable =yes" />
+  <link rel="icon" sizes="192x192" href="../../app/image/chart.png">
+
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Pridi' rel='stylesheet'>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script> -->
+
+
+  <link rel="stylesheet" href="../../link_require/angular-material.min.css">
+  <script src="../../link_require/angular.min.js"></script>
+  <script src="../../link_require/angular-animate.min.js"></script>
+  <script src="../../link_require/angular-aria.min.js"></script>
+  <script src="../../link_require/angular-messages.min.js"></script>
+  <script src="../../link_require/angular-material.min.js"></script>
+  <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500"> -->
+  <link rel="stylesheet" href="../../app/search/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../app/search/assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../app/search/assets/css/form-elements.css">
+  <link rel="stylesheet" href="../../app/search/assets/css/style.css">
+
+
+  <!-- <script src="../../bower_components/angular/angular-route.min.js"></script> -->
+  <script src="../../app/search/assets/js/jquery-1.11.1.min.js"></script>
+  <script src="../../app/search/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../../app/search/assets/js/jquery.backstretch.min.js"></script>
+  <script src="../../app/search/assets/js/scripts.js"></script>
+  <!-- <script src="../../bower_components/bootstrap/ui-bootstrap-tpls-0.10.0.min.js"></script> -->
+  <!-- //from web -->
+  <!-- <link rel="stylesheet" href="../../../css/bootstrap.css"> -->
+  <!-- <link href="../../../css/style.css" rel='stylesheet' type='text/css' /> -->
+
+  <script type="text/javascript" src="../../bower_components/moment/moment.js"></script>
+
+  <link rel="stylesheet" href="../../app/q_er/css/mycss.css">
+
+  <script src="../app/q_er/q_er.js"></script>
+  <script src="../../app/form.factory.js"></script>
+  <script type="text/javascript" src="../../app/app.factory.js"></script>
+  <script type="text/javascript" src="../../app/app2.factory.js"></script>
+</head>
+
+<body ng-controller="q_erController as vm">
+
+  <div class="container">
+    <div flex layout="row">
+      <div flex layout="column">
+        <div class="box-1 ">
+          <div class="panel-heading" flex layout="row">
+            <input type="text" style="margin-top: 5px;" class=" width17vW" placeholder="Q number" value=""
+              ng-model="vm.qnumber">
+
+            <md-button style="margin-top: 10px;" class="md-icon-button  md-raised " aria-label="Favorite"
+              ng-click="get_hn(vm.qnumber)">
+              <img src="../../app/icon/ic_search_black_48dp.png">
+            </md-button>
+            <md-button style="margin-top: 10px;" class="md-icon-button  md-raised " aria-label="Favorite"
+              ng-click="refreshpage()">
+              <img src="../../app/icon/ic_autorenew_black_48dp.png">
+            </md-button>
+            <a href="\qlcder#?department={{vm.department}}" + target="_blank">
+              <img class="square5" src="app/image/lcd.png" alt="No picture found">
+            </a>
+          </div>
+        </div>
+        <div class="box-2">
+          <div id='b2' class="">
+            <div class="panel-body" runat="server" style="overflow-y:scroll; height:90vH">
+              <table class=" fontn widthtable">
+                <tr ng-repeat="detail in transactionER | orderBy : 'registdate'">
+                  <td class="btnh " ng-if="detail.currenttracking.status == 'รอเรียกคิว'">
+                    <md-button aria-label='this' class="md-raised   widthcard " ng-click="detail_hn(detail)">
+                      <div flex layout="row" style="width:44vW;justify-content: space-between;">
+                        <div class="triagebox1" ng-if="detail.TriageLevel=='EMELVL1'"> </div>
+                        <div class="triagebox2" ng-if="detail.TriageLevel=='EMELVL2'"> </div>
+                        <div class="triagebox3" ng-if="detail.TriageLevel=='EMELVL3'"> </div>
+                        <div class="triagebox4" ng-if="detail.TriageLevel=='EMELVL4'"> </div>
+                        <div class="triagebox5"
+                          ng-if="detail.TriageLevel!='EMELVL1' && detail.TriageLevel!='EMELVL2' && detail.TriageLevel!='EMELVL3' && detail.TriageLevel!='EMELVL4'">
+                        </div>
+                        <div class="text1"> {{fourdigit(detail.AN)}}</div>
+                        <div flex layout="column">
+                          <div class="text2"> {{detail.name}}</div>
+                          <div> {{detail.HN}} เวลา:{{detail.registdate | date : " HH:mm" }} </div>
+                        </div>
+                      </div>
+                      <!-- <img class="img2" src="../../app/icon/va.png" ng-if=" detail.rec==true">
+                      <img class="img2" src="../../app/icon/ic_save_black_48dp.png" ng-if=" detail.rectn==true"> -->
+                    </md-button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div layout="column" ng-if="vm.findhn">
+        <div class="box_31 ">
+          <div class=" textheader">
+            {{vm.department}}
+          </div>
+        </div>
+        <div class="box_32">
+          <md-content class="md-padding" layout-xs="column" layout="row">
+            <!-- left -->
+            <div flex-xs flex-gt-xs="90" layout="column">
+              <md-card style="height:65vH;justify-content: flex-start;">
+                <md-button aria-label='this' class="md-raised    widthbutton" ng-click="callpt(selectopd)">
+                  เรียกคิว
+                </md-button>
+              </md-card>
+            </div>
+          </md-content>
+
+
+        </div>
+        <!-- </div> -->
+        <div class="box_33">
+          <div flex layout="row" ng-show="">
+            <div flex layout="row" style="margin-top: 15px;">
+              <div class="text1">{{vm.title1}} {{vm.department}}</div>
+              <md-button aria-label='this' class="md-raised   widthbutton " ng-if="vm.selectcase"
+                ng-click="save_rec(vm.department,selecter)">
+                บันทึก
+              </md-button>
+              <!-- <md-button aria-label='this' class="md-raised   widthbutton " ng-click="refreshpage()">
+                RESET
+              </md-button> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

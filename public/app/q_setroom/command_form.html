@@ -1,0 +1,47 @@
+<form name="commandlist" id="commandform" hidden>
+
+  <div class="container" style="padding: 0px 0px;" class="">
+    <div class="panel panel-default width60vW">
+      <div class="panel-heading" align="center">
+        <font face="" color="#6C7A89" size="6">
+          Add New room
+        </font>
+      </div>
+      <div class="panel-body">
+        <!--<h3 class="text-center">Insert command Into Database</h3>-->
+        <div class="jumbotron">
+          <div class="form-group">
+            <table>
+              <tr>
+                <td>
+                  <md-content flex layout-padding class="bgcolor500 width25">
+                    department :
+                    <select name="repeatSelect" class="form-control " id="repeatSelect" ng-model="vm.department">
+                      <option ng-repeat="x in department " value="{{x.department}}">{{x.department}}</option>
+                    </select>
+                    <input type="text" class="form-control" name="department" placeholder="department" value="vm.department" ng-hide="true" required/>
+
+                  </md-content>
+                  <!-- <button type="button" class="btn btn-info" ng-click="login(password,vm.department)" style="width:150px"> Submit </button> -->
+
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="form-group">
+            <input type="text" name="room" class="form-control width10vW" placeholder="room " ng-model="froom.room" value=" " autofocus />
+     </div>
+          <!-- <div class="form-group">
+            <input type="text" name="Qno" class="form-control width100" placeholder="NB " ng-model="froom.NB" value=" " autofocus
+            />
+          </div> -->
+          <div class="form-group ">
+            <button class="btn btn-warning " ng-click="saveroom(froom,vm.department);" ng-disabled="commandlist.$invalid ">Add Into Database</button>
+            <button class="btn btn-warning" ng-click="clearcontent(froom)">Clear content</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

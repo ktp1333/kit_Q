@@ -1,0 +1,38 @@
+<form id="commandeditForm" ng-submit="Updatecommand(vm)" hidden>
+
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-heading" align="center">
+        <font face="" color="#6C7A89" size="6">
+          Update command
+        </font>
+      </div>
+      <div class="panel-body" align="center">
+        <!--<h3 class="text-center">Update command Into Database</h3>-->
+        <div class="jumbotron">
+          <div class="form-group">
+            <label for="department">department:</label>
+            <input type="text" name="department" class="form-control width100" placeholder="department " ng-model="vm.dep.department" value=" " />
+          </div>
+          <div class="form-group">
+
+              <input type="text" name="pwd" class="form-control width100" placeholder="pwd " ng-model="vm.dep.pwd" value=" " />
+              <input type="text" name="group" class="form-control width10vW" placeholder="group " ng-model="vm.dep.group" value=" "  />
+              <input type="text" name="displayorder" class="form-control width10vW" placeholder="displayorder " ng-model="vm.dep.displayorder" value=" "  />
+            
+            </div>
+          <div class="form-group">
+            <input type="text" class="form-control" ng-model="vm.dep._id" value="{{vm.dep._id}}" ng-show="false">
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-warning" ng-disabled="vm.dep.$invalid" ng-click="Updatecommand(vm.dep)">Update</button>
+            <!-- <button class="btn btn-warning" ng-disabled="vm.dep.$invalid" ng-click="insertcommand(vm.dep)">Add new</button> -->
+            <button class="btn btn-warning" ng-disabled="vm.dep.$invalid" ng-click="cancelMsg(vm.dep._id)">Cancel</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

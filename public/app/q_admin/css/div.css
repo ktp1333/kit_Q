@@ -1,0 +1,154 @@
+  
+      .dimage {
+        width: 100%!important;
+        /* min-width: 15vH;
+        max-width: 15vH; */
+        min-height: 25vH;
+        max-height: 25vH;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        /* border:solid 1px gray; */
+        margin-left: 3px;
+        text-align: left;
+      }
+  .d1 {
+  /* display: block; */
+  overflow-y: scroll!important;
+  height:4000px;
+  }
+
+  .d2 {
+    float: left;
+     height: 15em; 
+     margin-right: 1%; 
+     margin-bottom: 0.5em;
+  }
+  .d3 {
+    text-align: center!important;
+  }
+  .div1 {
+    /* position: relative; */
+    /* left: 100px; */
+    /* float:left!important; */
+    /* width:100px; */
+    /* height:100px;
+    border:solid 2px red; */
+    /* text-align:left!important; */
+    float:left;
+    margin-right:2vW;
+    /* border:solid 2px green; */ 
+    text-align:center;
+}
+.div2 {
+    float:right;
+    margin-right: 2vW;
+    /* border:solid 2px green; */ 
+    text-align:center;
+}
+
+ 
+  .d4 {
+    /* width: 98%; */
+    min-height: 50vH;
+    max-height: 50vH;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    /* border:solid 1px gray; */
+    margin-left: 3px;
+    text-align: left;
+  }
+.container {
+    display: flex;
+    justify-content: center;
+  }
+       
+  .width100 {
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+    min-width:100%;
+    max-width:100%;
+  }
+  .width2vW {
+    min-width:2vW;
+    max-width:2vW;
+  }
+  .width3vW {
+    min-width:3vW;
+    max-width:3vW;
+  }
+  .width10vW {
+    min-width:10vW;
+    max-width:10vW;
+  }
+  .width30vW {
+    min-width:30vW;
+    max-width:30vW;
+  }
+  .width20vW {
+    min-width:20vW;
+    max-width:20vW;
+  }
+  .width25vW {
+    min-width:25vW;
+    max-width:25vW;
+  }
+  .width40vW {
+    min-width:40vW !important;
+    max-width:40vW !important;
+  }
+  .width45vW {
+    min-width:45vW !important;
+    max-width:45vW !important;
+  }
+  .width60W {
+    min-width:60vW !important;
+    max-width:60vW !important;
+  }
+  .width85vW {
+    min-width:85vW !important;
+    max-width:85vW !important;
+  }
+  .width25 {
+    width:25vW !important;
+  }
+    .marginleft100 {
+    margin-left: 100px;
+  }
+  .margin15 {
+    margin-left: 1vW !important;
+    margin-top: 1vW !important;
+    margin-bottom: 1vW !important;
+    margin-right: 1vW !important;
+  }
+  .align-c {
+    text-align: center !important;
+  }
+  .align-l {
+    text-align: left !important;
+  }
+  .align-r {
+    text-align: right !important;
+  }
+  .marginleft15 {
+    /* margin-left: 2vW !important; */
+    /* display: block; */
+    margin-left: 1vW;
+  }
+
+  .marginright15 {
+    /* margin-left: 2vW !important; */
+    /* display: block; */
+    margin-right: 1vW;
+  }
+  .pad0{
+    padding: 0 !important;
+  }
+  .margintop05{
+    margin-top: 0.5vW !important;
+  }
+  .margintop2{
+    margin-top: 2vW !important;
+  }

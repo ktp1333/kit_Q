@@ -1,0 +1,219 @@
+/* 1 createdAt:2/8/2022, 4:03:10 PM*/
+{
+	"_id" : ObjectId("620231ce3fbb9a0001fedc4d"),
+	"department" : "test",
+	"pwd" : "test",
+	"group" : "8",
+	"displayorder" : 20,
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "D"
+},
+
+/* 2 createdAt:12/7/2021, 2:00:00 PM*/
+{
+	"_id" : ObjectId("61af06700f35c2343035fd5a"),
+	"department" : "ห้องผ่าตัด",
+	"pwd" : "or123",
+	"group" : "6",
+	"displayorder" : 19,
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A"
+},
+
+/* 3 createdAt:12/2/2021, 3:34:06 PM*/
+{
+	"_id" : ObjectId("61a884fe0dd115321435d448"),
+	"department" : "ห้องยา ชั้น 3",
+	"pwd" : "px3",
+	"group" : "5",
+	"displayorder" : 18,
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A"
+},
+
+/* 4 createdAt:12/2/2021, 3:12:57 PM*/
+{
+	"_id" : ObjectId("61a880096dbfb00ca08a0499"),
+	"department" : "ห้องยา ชั้น 2",
+	"pwd" : "px2",
+	"group" : "5",
+	"displayorder" : 17,
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A"
+},
+
+/* 5 createdAt:12/2/2021, 3:11:46 PM*/
+{
+	"_id" : ObjectId("61a87fc26dbfb00ca08a0497"),
+	"department" : "ห้องยา ชั้น 1",
+	"pwd" : "px1",
+	"group" : "5",
+	"displayorder" : 16,
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A"
+},
+
+/* 6 createdAt:11/30/2021, 10:05:53 AM*/
+{
+	"_id" : ObjectId("61a5951184834f28a8642daf"),
+	"department" : "จุดคัดกรองผู้ป่วยใหม่จักษุ",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "screeneye",
+	"group" : "2",
+	"displayorder" : 4
+},
+
+/* 7 createdAt:11/30/2021, 10:05:35 AM*/
+{
+	"_id" : ObjectId("61a594ff84834f28a8642dae"),
+	"department" : "ห้องยา การเงินชั้น 3",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "cx3",
+	"group" : "4",
+	"displayorder" : 15
+},
+
+/* 8 createdAt:11/30/2021, 10:05:22 AM*/
+{
+	"_id" : ObjectId("61a594f284834f28a8642dad"),
+	"department" : "แผนกศัลยกรรม สูตินรีเวช กระดูก",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "opd",
+	"group" : "3",
+	"displayorder" : 11
+},
+
+/* 9 createdAt:11/30/2021, 10:04:50 AM*/
+{
+	"_id" : ObjectId("61a594d284834f28a8642dac"),
+	"department" : "แผนกกุมารเวชกรรม",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "opd",
+	"group" : "3",
+	"displayorder" : 10
+},
+
+/* 10 createdAt:11/30/2021, 10:04:32 AM*/
+{
+	"_id" : ObjectId("61a594c084834f28a8642dab"),
+	"department" : "แผนกอายุรกรรมทั่วไป",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "opd",
+	"group" : "3",
+	"displayorder" : 9
+},
+
+/* 11 createdAt:11/30/2021, 10:04:13 AM*/
+{
+	"_id" : ObjectId("61a594ad84834f28a8642daa"),
+	"department" : "ห้องยา การเงินชั้น 2",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "cx2",
+	"group" : "4",
+	"displayorder" : 14
+},
+
+/* 12 createdAt:11/30/2021, 10:03:57 AM*/
+{
+	"_id" : ObjectId("61a5949d84834f28a8642da9"),
+	"department" : "ห้องตรวจ 9-11 ชั้น 2",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "opd",
+	"group" : "3",
+	"displayorder" : 7
+},
+
+/* 13 createdAt:11/30/2021, 10:03:43 AM*/
+{
+	"_id" : ObjectId("61a5948f84834f28a8642da8"),
+	"department" : "ห้องตรวจ 6-8 ชั้น 2",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "opd",
+	"group" : "3",
+	"displayorder" : 6
+},
+
+/* 14 createdAt:11/30/2021, 10:02:45 AM*/
+{
+	"_id" : ObjectId("61a5945584834f28a8642da7"),
+	"department" : "ห้องตรวจ 1-4 ชั้น 2",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "opd",
+	"group" : "3",
+	"displayorder" : 5
+},
+
+/* 15 createdAt:11/30/2021, 10:02:06 AM*/
+{
+	"_id" : ObjectId("61a5942e84834f28a8642da6"),
+	"department" : "จุดบริการหน้าห้องตรวจชั้น M",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "opd",
+	"group" : "3",
+	"displayorder" : 8
+},
+
+/* 16 createdAt:11/30/2021, 10:01:41 AM*/
+{
+	"_id" : ObjectId("61a5941584834f28a8642da5"),
+	"department" : "ห้องยา การเงินชั้น 1",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "cx1",
+	"group" : "4",
+	"displayorder" : 13
+},
+
+/* 17 createdAt:11/30/2021, 10:01:17 AM*/
+{
+	"_id" : ObjectId("61a593fd84834f28a8642da4"),
+	"department" : "อุบัติเหตุและฉุกเฉิน",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "er",
+	"group" : "3",
+	"displayorder" : 12
+},
+
+/* 18 createdAt:11/30/2021, 10:00:59 AM*/
+{
+	"_id" : ObjectId("61a593eb84834f28a8642da3"),
+	"department" : "จุดเวชระเบียนชั้น 1",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "regist",
+	"group" : "1",
+	"displayorder" : 1
+},
+
+/* 19 createdAt:11/30/2021, 10:00:36 AM*/
+{
+	"_id" : ObjectId("61a593d484834f28a8642da2"),
+	"department" : "จุดคัดกรองชั้น M",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "screenm",
+	"group" : "2",
+	"displayorder" : 3
+},
+
+/* 20 createdAt:11/30/2021, 9:58:41 AM*/
+{
+	"_id" : ObjectId("61a5936184834f28a8642da1"),
+	"department" : "จุดตรวจสอบสิทธิ์ชั้น 1",
+	"orguid" : "5faa3d95f71034497f38a208",
+	"statusflag" : "A",
+	"pwd" : "sit1",
+	"group" : "2",
+	"displayorder" : 2
+}

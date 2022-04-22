@@ -1,0 +1,130 @@
+<html ng-app="myApp" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <title>Q</title>
+  <meta name="apple-mobile-web-app-title" content="Q" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content="">
+  <meta name="viewport"
+    content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 3, user-scalable =yes" />
+  <link rel="icon" sizes="192x192" href="../../app/image/chart.png">
+
+  <link rel="stylesheet" href="../../assets/css/font.css">
+  <link rel="stylesheet" href="../../link_require/angular-material.min.css">
+  <script src="../../link_require/angular.min.js"></script>
+  <script src="../../link_require/angular-animate.min.js"></script>
+  <script src="../../link_require/angular-aria.min.js"></script>
+  <script src="../../link_require/angular-messages.min.js"></script>
+  <script src="../../link_require/angular-material.min.js"></script>
+  <link rel="stylesheet" href="../../app/search/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../app/search/assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../app/search/assets/css/form-elements.css">
+  <!-- <link rel="stylesheet" href="../../app/search/assets/css/style.css"> -->
+
+
+  <script src="../../app/search/assets/js/jquery-1.11.1.min.js"></script>
+  <script src="../../app/search/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../../app/search/assets/js/jquery.backstretch.min.js"></script>
+  <script src="../../app/search/assets/js/scripts.js"></script>
+  <script src="../../template/moment/moment.min.js"></script>
+  <script src="../../bower_components/underscore/underscore.js"></script>
+
+
+  <script type="text/javascript" src="../../bower_components/async/dist/async.min.js"></script>
+
+  <link rel="stylesheet" href="../../app/q_or/css/mycss.css">
+
+  <script src="../app/q_or/q_or.js"></script>
+  <script src="../../app/form.factory.js"></script>
+  <script type="text/javascript" src="../../app/app.factory.js"></script>
+  <script type="text/javascript" src="../../app/app2.factory.js"></script>
+</head>
+
+
+<style>
+  html {
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    font-family: 'Bai Jamjuree', sans-serif;
+    /* font-family: 'Encode Sans', sans-serif; */
+    /* font-size: 3.2vmax; */
+  }
+
+  /* * {
+    -ms-overflow-style: none; */
+  /* for Internet Explorer, Edge */
+  /* scrollbar-width: none; */
+  /* for Firefox */
+  /* overflow-y: scroll;
+  } */
+
+  *::-webkit-scrollbar {
+    width: 5px;
+    background-color: #aaa
+      /* display: none; */
+      /* for Chrome, Safari, and Opera */
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #eee;
+  }
+
+  md-tabs-wrapper {
+    display: none;
+  }
+</style>
+
+<body style="background-color: white;" class="fullheight-panel" ng-controller="q_orController as vm">
+
+  <div class="fullheight-header" layout="column">
+    <div class="bottom-shadow" layout="row" layout-align="start center"
+      style="background: #002818;height: 80px;z-index: 3;">
+      <img src="../../assets/logo/logo_metta.png" style="margin-left: 15px;width: 50px; height: 50px;" />
+      <div>
+        <div style="color: white;font-size: 2rem;margin-left: 15px;font-weight: 500;">โรงพยาบาลเมตตาประชารักษ์
+          (วัดไร่ขิง)</div>
+        <div style="color: white;font-size: 1.5rem;margin-left: 15px;margin-top: -5px;">กรมการแพทย์ กระทรวงสาธารณสุข
+        </div>
+      </div>
+      <div flex layout="row" layout-align="center center"
+        style="color:white; padding: 5px;position:absolute;width: 100%;">
+        <h1 style="font-weight: 600 !important;margin: 0px;">{{vm.department}}</h1>
+      </div>
+    </div>
+
+  </div>
+  <div class="fullheight-content" layout="row" ng-cloak>
+    <div flex layout="column" layout-align="start start" class="fullheight-content"
+      style="background-color: #e1e1e1;padding: 5px;" layout-wrap>
+      <md-tabs class="fullheight-panel" md-dynamic-height style="width: 100%;" md-selected="tabIndex">
+        <md-tab class="fullheight-content" ng-repeat="page in displayListOr">
+          <md-tab-body>
+            <md-card class="md-whiteframe-8dp content-{{detail.statusorcolor}}" flex="100"
+              style="border-radius: 20px; margin:10px;" ng-repeat="detail in page ">
+              <md-card-content layout="row" layout-align="start center">
+                <div flex="35" layout="row" layout-align="space-between center">
+                  <span style="font-size: 8rem;">{{detail.operating_room}}</span>
+                </div>
+                <div flex="30" layout="column">
+                  <span style="font-size: 5rem;">{{detail.HN}}</span>
+                  <span style="font-size: 3rem;">{{vm.displaySecureName(detail.name)}}</span>
+                </div>
+                <div flex layout="row" layout-align="center center">
+                  <span style="font-size: 5rem; color: white;font-weight: 600;">{{detail.statusor}}</span>
+                </div>
+              </md-card-content>
+            </md-card>
+          </md-tab-body>
+        </md-tab>
+      </md-tabs>
+
+    </div>
+
+  </div>
+</body>
+
+</html>

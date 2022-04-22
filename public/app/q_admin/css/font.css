@@ -1,0 +1,29 @@
+  
+
+    .fontm {
+      font-family: 'Pridi', serif !important;
+      font-size: 1.8vW !important;
+      font-weight: bold !important;
+
+    }
+    /* .font13 {
+      font-family: 'Pridi', serif !important;
+      font-size: 2vW !important;
+       color:rgb(211, 206, 206);
+    } */
+    .fonth {
+      font-family: 'Pridi', serif !important;
+      font-size: 5vW !important;
+      color:#26A69A;
+
+    }
+    .font-1em {
+      font-family: 'Pridi', serif !important;
+      font-size: 1em !important;
+      font-style: bold !important;
+    }
+    .font-2em {
+      font-family: 'Pridi', serif !important;
+      font-size: 2em !important;
+      font-style: bold !important;
+    }

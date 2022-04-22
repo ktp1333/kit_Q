@@ -1,0 +1,98 @@
+<html ng-app="myApp" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <title>Q</title>
+  <!-- <meta http-equiv="refresh" content="20" /> -->
+  <meta name="apple-mobile-web-app-title" content="Q" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content="">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 3, user-scalable = yes"
+  />
+  <link rel="icon" sizes="192x192" href="chart.png">
+  <!-- <link href='https://fonts.googleapis.com/css?family=Pridi' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script> -->
+
+
+  <link rel="stylesheet" href="../../link_require/angular-material.min.css">
+  <script src="../../link_require/angular.min.js"></script>
+  <script src="../../link_require/angular-animate.min.js"></script>
+  <script src="../../link_require/angular-aria.min.js"></script>
+  <script src="../../link_require/angular-messages.min.js"></script>
+  <script src="../../link_require/angular-material.min.js"></script>
+  <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500"> -->
+  <link rel="stylesheet" href="../../app/search/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../app/search/assets/font-awesome/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="../../app/search/assets/css/form-elements.css"> -->
+  <!-- <link rel="stylesheet" href="../../app/search/assets/css/style.css"> -->
+  <script type="text/javascript" src="../../bower_components/async/dist/async.min.js"></script>
+  <!-- <script src="../../bower_components/angular/angular.min.js"></script> -->
+  <script src="../../bower_components/angular/angular-route.min.js"></script>
+  <script src="../../app/search/assets/js/jquery-1.11.1.min.js"></script>
+  <script src="../../app/search/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../../app/search/assets/js/jquery.backstretch.min.js"></script>
+  <script src="../../app/search/assets/js/scripts.js"></script>
+  <script src="../../template/moment/moment.min.js"></script>
+  <!-- <script src="../../bower_components/bootstrap/ui-bootstrap-tpls-0.10.0.min.js"></script> -->
+
+  <link rel="stylesheet" href="../../app/q_setroom/css/mycss.css">
+
+  <script src="../app/q_setroom/q_setroom.controller.js"></script>
+  <script type="text/javascript" src="../../app/app.factory.js"></script>
+</head>
+
+<body ng-controller="q_setroomController as vm" style="overflow-y:hidden;">
+
+  <!-- <h1 class="text-center">Command</h1> -->
+
+
+  <div id="top">
+    <div class="form-group ">
+
+      <button type="button" class="btn btn-info marginleft15" ng-click="formToggle()">Add New <span
+          class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+  
+    </div>
+    <div ng-include src="'../../app/q_setroom/command_form.html'"></div>
+    <div ng-include src="'../../app/q_setroom/command_editForm.html'"></div>
+    <div class="panel-body " runat="server" style="overflow-y:scroll; height:500px">
+      <div class="table-responsive">
+        <table class="table table-hover ">
+          <tr>
+            <th>Department</th>
+            <th>Room</th>
+            <th><button class="btn btn-info" ng-click="listroom()" title="refresh">
+              <i class="fa fa-refresh" aria-hidden="true"></i>
+            </button></th>
+          </tr>
+          <tr ng-repeat="data in rooms">
+            <td>{{data.department}}</td>
+            <td>{{data.room}}</td>
+  
+            <td>
+              <button class="btn btn-warning" ng-click="editcommand(data)" title="Edit">
+                <span class="glyphicon glyphicon-edit"></span>
+              </button>
+            </td>
+            <td>
+              <button class="btn btn-danger" ng-click="deletecommand(data)" title="Delete">
+                <span class="glyphicon glyphicon-trash"></span>
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

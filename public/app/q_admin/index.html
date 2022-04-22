@@ -1,0 +1,98 @@
+<html ng-app="myApp" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <title>Q</title>
+  <!-- <meta http-equiv="refresh" content="20" /> -->
+  <meta name="apple-mobile-web-app-title" content="Q" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content="">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 3, user-scalable = yes"
+  />
+  <link rel="icon" sizes="192x192" href="tracking.png">
+
+
+
+  <link rel="stylesheet" href="../../link_require/angular-material.min.css">
+  <script src="../../link_require/angular.min.js"></script>
+  <script src="../../link_require/angular-animate.min.js"></script>
+  <script src="../../link_require/angular-aria.min.js"></script>
+  <script src="../../link_require/angular-messages.min.js"></script>
+  <script src="../../link_require/angular-material.min.js"></script>
+  <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500"> -->
+  <link rel="stylesheet" href="../../app/search/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../app/search/assets/font-awesome/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="../../app/search/assets/css/form-elements.css"> -->
+  <!-- <link rel="stylesheet" href="../../app/search/assets/css/style.css"> -->
+  <script type="text/javascript" src="../../bower_components/async/dist/async.min.js"></script>
+  <!-- <script src="../../bower_components/angular/angular.min.js"></script> -->
+  <script src="../../bower_components/angular/angular-route.min.js"></script>
+  <script src="../../app/search/assets/js/jquery-1.11.1.min.js"></script>
+  <script src="../../app/search/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../../app/search/assets/js/jquery.backstretch.min.js"></script>
+  <script src="../../app/search/assets/js/scripts.js"></script>
+  <script src="../../template/moment/moment.min.js"></script>
+  <!-- <script src="../../bower_components/bootstrap/ui-bootstrap-tpls-0.10.0.min.js"></script> -->
+
+  <link rel="stylesheet" href="../../app/q_admin/css/div.css">
+  <link rel="stylesheet" href="../../app/q_admin/css/color_green.css">
+  <link rel="stylesheet" href="../../app/q_admin/css/font.css">
+  <!-- <link rel="stylesheet" href="../../config/css/color_btn.css"> -->
+  <!-- <link rel="stylesheet" href="../../config/css/stat_kit/font.css"> -->
+  <script src="../../app/q_admin/q_admin.controller.js"></script>
+  <script type="text/javascript" src="../../app/app.factory.js"></script>
+  <!-- <script src="../../bower_components/angular/angular.js"></script>
+  <script src="../../bower_components/qrcode/lib/qrcode.min.js"></script>
+  <script src="../../bower_components/angular-qr/angular-qr.min.js"></script> -->
+</head>
+<style>
+  html {
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+  }
+
+  .content {
+    display: flex;
+    height: 100%;
+    flex-flow: column;
+  }
+
+  #section0,
+  #sectionscan,
+  #sectioncredit,
+  .contentheader {
+    flex: 0 1 auto;
+    /* 0 ตาม heigh ของ content */
+    flex-direction: column;
+  }
+
+  #sectionorder,
+  .contentdetail {
+    flex: 1 1 auto;
+    /* overflow: auto; */
+    overflow-y: hidden;
+    /*1 fill พื้นที่ที่เหลือ */
+  }
+
+  .contentfooter {
+    flex: 0 1 auto;
+    /* 0 ตาม heigh ของ content */
+  }
+</style>
+
+<body style="background-color: white;" ng-controller="q_adminController as vm">
+
+  <div class="content">
+    <div class="contentdetail" style="overflow-y:hidden;">
+      <div ng-include="'../../app/q_admin/menu.html'"></div>
+      <div style="float: center; width: 100%;" ng-include="'../../app/q_admin/right.html'"></div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
