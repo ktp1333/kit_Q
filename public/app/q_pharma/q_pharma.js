@@ -78,6 +78,7 @@ app.controller("q_pharmaController", function ($scope, $location, $http, $timeou
       vm.callq = true;
       vm.roomtxt = true;
       vm.callroom = params.currenttracking.room;
+      vm.qno=fourdigit(params.AN);
     }
 
   }
@@ -335,6 +336,15 @@ app.controller("q_pharmaController", function ($scope, $location, $http, $timeou
   }
 
   function callpt(roomno, qno) {
+    console.log(qno);
+
+    const message =new SpeechSynthesisUtterance();
+    const voices = speechSynthesis.getVoices();
+    const thVoice = voices.find(voice => voice.lang === "th-TH");
+    // const thVoice = voices.find(voice => voice.lang === "en-GB");
+    message.voice = thVoice;
+    message.text ="ขอเชิญหมายเลข "+qno+'ที่ห้อง'+roomno;
+     speechSynthesis.speak(message);
     // var language = "th";//th, en 
     // var queuenumber = qno;
     // var destination = "counter";//room, counter 

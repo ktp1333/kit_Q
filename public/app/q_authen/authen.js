@@ -85,7 +85,7 @@ app.controller("authenController", function ($scope, $http, globalSetting) {
           case "ER":
             window.location = "/qer#?dep=" + dep;
             break;
-          case "ห้องยา การเงิน":
+          case "การเงิน":
             window.location = "/qcashier#?dep=" + dep;
             break;
           case "ห้องยา":

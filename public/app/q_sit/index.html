@@ -176,7 +176,7 @@
               <!-- <div class="text1" ng-if="vm.roomtxt==true"> {{vm.callroom}}</div> -->
               <!-- <div class="fontlc fontr9 marginleft15 margintop1"> เรียกผู้ป่วยมาที่ {{vm.callroom}}</div> -->
               <md-button aria-label="this" ng-click="callpt(vm.callroom,vm.qno) "
-                class="md-raised width5vW margintop1 marginleft15">
+                class="md-raised width5vW margintop1 marginleft15" ng-show="vm.callroom">
                 <img style="width:30px;" src="app/image/call.png" alt="No picture found">
                 เรียกผู้ป่วย {{vm.qno}} มาที่ {{vm.callroom}}
               </md-button>
