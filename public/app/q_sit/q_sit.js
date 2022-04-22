@@ -64,11 +64,14 @@ app.controller("q_sitController", function ($scope, $location, $http, $timeout, 
 
     vm.findhn = true;
     $scope.selectopd = params;
+    
     console.log('$scope.selectopd', $scope.selectopd);
     if (params.currenttracking.room != '') {
       vm.callq = true;
       vm.roomtxt = true;
       vm.callroom = params.currenttracking.room;
+      vm.qno=fourdigit(params.AN);
+      // callpt(vm.callroom, vm.qno)
     }
 
   }
@@ -118,7 +121,12 @@ app.controller("q_sitController", function ($scope, $location, $http, $timeout, 
           $scope.opd = doc1;
           // console.log("$scope.opd", $scope.opd);
           // console.log( $scope.selectopd);
-          var man = $scope.selectopd.AN
+          if ($scope.selectopd) {
+            var man = $scope.selectopd.AN;
+          } else {
+            var man = '';
+          }
+         
           var thispt = _.filter($scope.opd, function (o) {
             return o.AN == man
           });
@@ -364,6 +372,18 @@ app.controller("q_sitController", function ($scope, $location, $http, $timeout, 
 
 
   function callpt(roomno, qno) {
+
+      console.log(qno);
+
+     const message =new SpeechSynthesisUtterance();
+     const voices = speechSynthesis.getVoices();
+     const thVoice = voices.find(voice => voice.lang === "th-TH");
+     // const thVoice = voices.find(voice => voice.lang === "en-GB");
+     message.voice = thVoice;
+     message.text ="ขอเชิญหมายเลข "+qno+'ที่ห้อง'+roomno;
+      speechSynthesis.speak(message);
+
+
     // var language = "th";//th, en 
     // var queuenumber = qno;
     // var destination = "counter";//room, counter 
